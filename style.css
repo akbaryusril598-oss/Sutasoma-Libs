@@ -1,0 +1,156 @@
+/* ===== Global Style ===== */
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Banner (Hero Section) ===== */
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* efek gelap halus */
+}
+
+.banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Navbar Brand (Judul: SUTASOMA LIBS) ===== */
+.navbar-brand {
+  font-family: 'Vina Sans', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 183, 255, 0.8); /* efek glow biru lembut */
+  transition: all 0.3s ease;
+  animation: fadeInDown 0.8s ease-in-out; /* animasi saat muncul */
+}
+
+.navbar-brand:hover {
+  text-shadow: 0 0 15px rgba(0, 183, 255, 1),
+               0 0 30px rgba(0, 183, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* ===== Animasi Fade In Turun ===== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-footer {
+  background-color: #0d6efd; /* Warna biru Bootstrap */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+.custom-footer p {
+  margin-bottom: 5px;
+}
+/* NEWS */
+/* Kontainer utama */
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* kiri = news, kanan = pengumuman */
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Box tiap kolom */
+.news-updates, .announcements {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Judul kolom */
+.news-updates h2, .announcements h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+/* Item News & Pengumuman */
+.news-item, .announcement-item {
+  display: flex;              
+  align-items: center;        
+  gap: 10px;                  
+  margin-bottom: 15px;
+}
+
+.news-item img, .announcement-item img {
+  width: 60px;                
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.news-item h3, .announcement-item h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #0066cc;
+}
+
+.news-item p, .announcement-item p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Link bisa diklik penuh */
+.news-item a, .announcement-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.news-item a:hover h3,
+.announcement-item a:hover h3 {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    margin: 10px;
+  }
+
+  .news-item, .announcement-item {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .news-item img, .announcement-item img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .news-item h3, .announcement-item h3 {
+    font-size: 15px;
+  }
+}

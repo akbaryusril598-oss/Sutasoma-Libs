@@ -1,0 +1,31 @@
+{
+  "news": [
+    {
+      "title": "Penambahan Jam Layanan",
+      "desc": "Mulai minggu depan, perpustakaan menambah jam operasional hingga pukul 19.00 WIB.",
+      "image": "img/news1.jpg",
+      "link": "#"
+    },
+    {
+      "title": "500 E-book Baru Tersedia",
+      "desc": "Kini tersedia lebih dari 500 e-book untuk seluruh mahasiswa UIN Salatiga.",
+      "image": "img/news2.jpeg",
+      "link": "#"
+    }
+  ],
+
+  "announcements": [
+    {
+      "title": "Pengumuman Libur Nasional",
+      "desc": "Perpustakaan tutup pada tanggal 25 Desember 2025.",
+      "image": "img/news3.jpg",
+      "link": "#"
+    },
+    {
+      "title": "Pendaftaran Volunteer Dibuka",
+      "desc": "Ayo daftar jadi volunteer perpustakaan untuk periode Januari–Maret.",
+      "image": "img/news4.jpeg",
+      "link": "#"
+    }
+  ]
+}
